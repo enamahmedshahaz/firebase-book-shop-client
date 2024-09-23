@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
 
 
 const BookCard = ({ book }) => {
@@ -30,7 +31,11 @@ const BookCard = ({ book }) => {
                             </div>
                         )
                     }
-                    <button className="btn btn-primary">Book Details</button>
+
+                    <Link to={`/books/${bookId}`}>
+                        <button className="btn btn-primary">Book Details</button>
+                    </Link>
+
                 </div>
             </div>
         </div>
