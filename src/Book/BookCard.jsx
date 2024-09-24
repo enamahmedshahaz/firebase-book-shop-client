@@ -33,7 +33,7 @@ const BookCard = ({ book }) => {
                     }
 
                     <Link to={`/books/${bookId}`}>
-                        <button className="btn btn-primary">Book Details</button>
+                        <button className="btn bg-rose-300">Book Details</button>
                     </Link>
 
                 </div>

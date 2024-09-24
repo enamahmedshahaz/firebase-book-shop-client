@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Banner from "../Banner/Banner";
 import { useEffect } from "react";
 import BookCard from "../Book/BookCard";
 
@@ -17,11 +16,9 @@ const Books = () => {
 
     return (
         <>
-
-            <Banner></Banner>
             <div>
                 This is books section: books {books.length}
-                <div className="grid grid-cols-3 gap-3">
+                <div className="grid grid-cols-1 gap-3 md:grid-cols-3 ">
                     {
                         books.map(aBook => <BookCard key={aBook.bookId} book={aBook}></BookCard>)
                     }

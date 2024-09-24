@@ -6,9 +6,12 @@ import Banner from "../Banner/Banner";
 
 const Home = () => {
     return (
-        <div>
+        <div className="container mx-auto">
             <Header></Header>
-            <Outlet></Outlet>
+            <Banner></Banner>
+            <div className="min-h-screen">
+                <Outlet></Outlet>
+            </div>
             <Footer></Footer>
         </div>
     );
