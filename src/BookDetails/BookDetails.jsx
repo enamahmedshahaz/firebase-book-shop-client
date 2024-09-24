@@ -10,7 +10,7 @@ const BookDetails = () => {
     const { bookId } = useParams();
     const [book, setBook] = useState({});
 
-    const { bookId: id, bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
+    const {  bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
 
     useEffect(() => {
 
@@ -26,12 +26,12 @@ const BookDetails = () => {
 
 
     const handleClickWish = () => {
-        toast.success(`Book "${bookName}" Added to your wishlist !`);
+        toast.success(`Book "${bookName}" Added to your wishlist.`);
 
     }
 
     const handleClickCart = () => {
-        toast.success(`Book "${bookName}" Added to Cart !`);
+        toast.success(`Book "${bookName}" Added to Cart.`);
     }
 
 
@@ -121,8 +121,8 @@ const BookDetails = () => {
 
 
                 <div className="flex gap-2">
-                    <button onClick={handleClickWish} className="btn  bg-rose-300">Wish to Read</button>
-                    <button onClick={handleClickCart} className="btn  bg-rose-300">Add to Cart</button>
+                    <button onClick={handleClickWish} className="btn  text-white  bg-rose-300">Wish to Read</button>
+                    <button onClick={handleClickCart} className="btn text-white  bg-rose-300">Add to Cart</button>
                 </div>
 
             </div>

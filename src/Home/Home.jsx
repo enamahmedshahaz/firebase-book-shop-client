@@ -8,11 +8,16 @@ const Home = () => {
     return (
         <div className="container mx-auto">
             <Header></Header>
-            <Banner></Banner>
-            <div className="min-h-screen">
+            <div className="mt-6">
+                <Banner></Banner>
+            </div>
+            <div className="min-h-screen mt-6">
                 <Outlet></Outlet>
             </div>
-            <Footer></Footer>
+
+            <div className="mt-6">
+                <Footer></Footer>
+            </div>
         </div>
     );
 };
