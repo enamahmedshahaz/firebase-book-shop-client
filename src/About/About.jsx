@@ -3,7 +3,10 @@
 const About = () => {
     return (
         <div>
-            This is About Page!
+            <h3 className="text-center text-2xl text-rose-400 font-bold">
+                :: Welcome to About Page ::
+            </h3>
+            
         </div>
     );
 };
