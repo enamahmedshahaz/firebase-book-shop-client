@@ -1,4 +1,4 @@
-
+import banner from "../assets/images/banner.jpg";
 
 const Banner = () => {
     return (
@@ -15,7 +15,7 @@ const Banner = () => {
             </div>
 
             <div className="w-1/2">
-                <img className="rounded-lg" src={"../../public/images/banner-photo-books.jpg"}></img>
+                <img className="rounded-lg" src={banner}></img>
             </div>
         </div>
     );

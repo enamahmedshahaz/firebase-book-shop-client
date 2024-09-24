@@ -1,4 +1,5 @@
 import { NavLink, useRouteError } from "react-router-dom";
+import error404Image from "../assets/images/image404.png";
 
 
 const ErrorPage = () => {
@@ -11,7 +12,7 @@ const ErrorPage = () => {
 
             <h1 className="text-2xl font-bold">Oops!</h1>
 
-            <img className="w-96" src={"../../public/images/image-404.png"}></img>
+            <img className="w-96" src={error404Image}></img>
 
             <p>Sorry, an unexpected error has occurred.</p>
             <p className="text-3xl text-red-600">
