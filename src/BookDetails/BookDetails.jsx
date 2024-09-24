@@ -2,6 +2,8 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import toast, { Toaster } from 'react-hot-toast';
+
 
 const BookDetails = () => {
 
@@ -24,18 +26,18 @@ const BookDetails = () => {
 
 
     const handleClickWish = () => {
+        toast.success(`Book "${bookName}" Added to your wishlist !`);
 
     }
 
     const handleClickCart = () => {
-
+        toast.success(`Book "${bookName}" Added to Cart !`);
     }
 
 
     return (
         <div className="flex justify-between items-start gap-4 bg-rose-100 p-10 rounded-md">
-
-
+            <div><Toaster /></div>
             <div className="flex flex-col justify-center items-center gap-2">
 
                 <img className="rounded-xl" src={image} alt={`image of book named ${bookName}`}></img>
