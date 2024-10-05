@@ -1,5 +1,5 @@
 import { NavLink, useRouteError } from "react-router-dom";
-import error404Image from "../assets/images/image404.png";
+import error404Image from "../../assets/images/image404.png";
 
 
 const ErrorPage = () => {

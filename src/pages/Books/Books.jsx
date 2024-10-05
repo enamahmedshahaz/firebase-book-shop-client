@@ -1,19 +1,21 @@
-import { useState } from "react";
-import { useEffect } from "react";
+// import { useState } from "react";
+// import { useEffect } from "react";
 import BookCard from "../Book/BookCard";
+import { useLoaderData } from "react-router-dom";
 
 
 const Books = () => {
 
-    const [books, setBooks] = useState([]);
+    const books = useLoaderData();
 
+    /*const [books, setBooks] = useState([]);
     useEffect(() => {
         fetch('books.json')
             .then(res => res.json())
             .then(data => setBooks(data));
 
     }, []);
-
+    */
     return (
         <>
             <div>
@@ -24,9 +26,7 @@ const Books = () => {
                     }
                 </div>
             </div>
-
         </>
-
 
     );
 };

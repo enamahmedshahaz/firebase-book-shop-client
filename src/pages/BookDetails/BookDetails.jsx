@@ -1,30 +1,34 @@
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+// import { useEffect, useState } from "react";
+// import { useParams } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import toast, { Toaster } from 'react-hot-toast';
 
 
 const BookDetails = () => {
 
-    const { bookId } = useParams();
-    const [book, setBook] = useState({});
+    // const { bookId } = useParams();
+    // const [book, setBook] = useState({});
 
-    const {  bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
+    const book = useLoaderData();
 
-    useEffect(() => {
+    const { bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
 
-        fetch('/books.json')
-            .then((response) => response.json())
-            .then((books) => {
-                // Find the book that matches the bookId
-                const selectedBook = books.find((b) => b.bookId === parseInt(bookId));
-                setBook(selectedBook);
-
-            });
-    }, [bookId]);
-
-
+    /*
+        useEffect(() => {
+    
+            fetch('/books.json')
+                .then((response) => response.json())
+                .then((books) => {
+                    // Find the book that matches the bookId
+                    const selectedBook = books.find((b) => b.bookId === parseInt(bookId));
+                    setBook(selectedBook);
+    
+                });
+        }, [bookId]);
+    
+    */
     const handleClickWish = () => {
         toast.success(`Book "${bookName}" Added to your wishlist.`);
 

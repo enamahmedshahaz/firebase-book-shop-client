@@ -1,7 +1,8 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../pages/Footer/Footer";
 import Header from "../pages/Header/Header";
-import Banner from "../Banner/Banner";
+import Banner from "../pages/Banner/Banner";
+
 
 
 const Root = () => {

@@ -1,12 +1,12 @@
-import About from "../About/About";
-import Blog from "../Blog/Blog";
-import BookDetails from "../BookDetails/BookDetails";
-import Books from "../Books/Books";
-import ErrorPage from "../ErrorPage/ErrorPage";
 import FAQ from "../pages/FAQ/FAQ";
 import Root from "../layout/Root";
-
 import { createBrowserRouter } from 'react-router-dom';
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import Books from "../pages/Books/Books";
+import About from "../pages/About/About";
+import Blog from "../pages/Blog/Blog";
+import BookDetails from "../pages/BookDetails/BookDetails";
+
 
 const router = createBrowserRouter([
   {
@@ -17,6 +17,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Books></Books>,
+        loader: () => fetch('http://localhost:5000/api/products'),
       },
       {
         path: "/faq",
@@ -24,7 +25,9 @@ const router = createBrowserRouter([
       },
       {
         path: "/books/:bookId",
+        loader: ({params}) => fetch(`http://localhost:5000/api/products/${params.bookId}`),
         element: <BookDetails></BookDetails>,
+
       },
       {
         path: "/about",
