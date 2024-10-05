@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
-import Footer from "../Footer/Footer";
-import Header from "../Header/Header";
+import Footer from "../pages/Footer/Footer";
+import Header from "../pages/Header/Header";
 import Banner from "../Banner/Banner";
 
 
-const Home = () => {
+const Root = () => {
     return (
         <div className="container mx-auto">
             <Header></Header>
@@ -14,7 +14,6 @@ const Home = () => {
             <div className="min-h-screen mt-6">
                 <Outlet></Outlet>
             </div>
-
             <div className="mt-6">
                 <Footer></Footer>
             </div>
@@ -22,4 +21,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default Root;
