@@ -30,7 +30,7 @@ const Header = () => {
                     </ul>
                 </div>
 
-                <NavLink className="btn btn-ghost text-xl text-rose-400" to={'/'}>Simple Book Shop</NavLink>
+                <NavLink className="btn btn-ghost text-xl text-rose-400" to={'/'}>Firebase Book Shop</NavLink>
 
             </div>
             <div className="navbar-center hidden lg:flex">

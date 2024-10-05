@@ -9,7 +9,7 @@ const Banner = () => {
 
                 <h4 className="font-semibold text-2xl text-gray-400"> Find Your Next Favorite Book at -</h4>
 
-                <h2 className="font-semibold text-5xl text-rose-400 uppercase">Simple Book Shop</h2>
+                <h2 className="font-semibold text-5xl text-rose-400 uppercase">Firebase Book Shop</h2>
 
                 <button className="btn bg-rose-400 text-2xl text-white">Buy Books</button>
             </div>
