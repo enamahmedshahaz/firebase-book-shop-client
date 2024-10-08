@@ -1,19 +1,34 @@
-# Simple Book Shop 
+# Firebase-Book-Shop Project
+ 
+## Project Frontend
+
+**Frontend Live:** [https://firebase-book-shop.netlify.app](https://firebase-book-shop.netlify.app) 
+
+**Frontend Github Repo:** [https://github.com/enamahmedshahaz/firebase-book-shop-client](https://github.com/enamahmedshahaz/firebase-book-shop-client) 
 
 
-**Live link:** [https://simple-book-shop.netlify.app](https://simple-book-shop.netlify.app) 
+## Project Backend
+
+**Backend Live:** [https://vercel.live/link/firebase-book-shop-server.vercel.app](https://vercel.live/link/firebase-book-shop-server.vercel.app) 
+
+**Backend Github Repo:** [https://github.com/enamahmedshahaz/firebase-book-shop-server](https://github.com/enamahmedshahaz/firebase-book-shop-server) 
+
 
 
 ## Features / Project Description
- - User can Books with photo and relevant info
- - User can view details of a book by clicking on book details button
+ - User login and register
+ - Only register users can see products
+ - Data comes from backend server
+ - User can view details of a book by clicking on details button
  - Shows Book card with beautiful pictures, its name and description
- - Frequently Asked Questions section
+ - Private routes are authenticated using firebase
  - Fully responsive UI for large and small devices 
 
 
 ## Technologies Used
  - HTML
  - Tailwind CSS + DaisyUI
- - React Js
- - React Router Library
+ - React
+ - React router dom
+ - Firebase Authentication with Google login
+ - Express.js backend server
