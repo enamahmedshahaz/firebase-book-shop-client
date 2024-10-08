@@ -2,10 +2,11 @@ import FAQ from "../pages/FAQ/FAQ";
 import Root from "../layout/Root";
 import { createBrowserRouter } from 'react-router-dom';
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
-import Books from "../pages/Books/Books";
 import About from "../pages/About/About";
 import Blog from "../pages/Blog/Blog";
 import BookDetails from "../pages/BookDetails/BookDetails";
+import Login from "../pages/Login/Login";
+import Home from "../pages/Home/Home";
 
 
 const router = createBrowserRouter([
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Books></Books>,
+        element: <Home></Home>,
         loader: () => fetch('http://localhost:5000/api/products'),
       },
       {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/books/:bookId",
-        loader: ({params}) => fetch(`http://localhost:5000/api/products/${params.bookId}`),
+        loader: ({ params }) => fetch(`http://localhost:5000/api/products/${params.bookId}`),
         element: <BookDetails></BookDetails>,
 
       },
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog></Blog>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
       },
 
     ]
