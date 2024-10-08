@@ -1,9 +1,30 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
+import toast, { Toaster } from "react-hot-toast";
 
 
 const Header = () => {
+    
+    const { user, signOutUser } = useContext(AuthContext);
+
+    const handleClickLogout = () => {
+
+        signOutUser()
+            .then(() => {
+                toast.success(" Sign-out successful");
+            })
+            .catch(error => {
+                toast.error(error);
+            });
+    }
+
     return (
+
         <div className="navbar bg-base-300 mt-2 rounded-lg">
+
+            <Toaster></Toaster>
+
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -42,7 +63,21 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to={'/login'}>   <button className="btn bg-rose-400 text-white">Sign In</button> </Link>
+
+                {
+                    user ?
+                        <>
+                            <p className=""> <span className="font-bold">Welcome</span> {user?.displayName}</p>
+                            <a onClick={handleClickLogout} className="btn bg-rose-400 text-white ml-3">Logout</a>
+                        </>
+                        :
+                        <Link to={'/login'}>   <button className="btn bg-rose-400 text-white">Sign In</button> </Link>
+
+
+                }
+
+
+
             </div>
         </div>
     );
