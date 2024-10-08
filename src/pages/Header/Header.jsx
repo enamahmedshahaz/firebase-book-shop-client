@@ -5,7 +5,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 
 const Header = () => {
-    
+
     const { user, signOutUser } = useContext(AuthContext);
 
     const handleClickLogout = () => {
@@ -45,9 +45,7 @@ const Header = () => {
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                         <NavLink className={({ isActive }) => (isActive ? "text-rose-600 font-bold " : "text-black")} to={"/"}>  <li>Home</li></NavLink>
-                        <NavLink className={({ isActive }) => (isActive ? "text-rose-600 font-bold " : "text-black")} to={"/about"}>  <li>About</li></NavLink>
-                        <NavLink className={({ isActive }) => (isActive ? "text-rose-600 font-bold " : "text-black")} to={"/blog"}><li>Blog</li></NavLink>
-                        <NavLink className={({ isActive }) => (isActive ? "text-rose-600 font-bold " : "text-black")} to={"/faq"}><li>FAQ</li></NavLink>
+                        <NavLink className={({ isActive }) => (isActive ? "text-rose-600 font-bold " : "text-black")} to={"/products"}><li>Products</li></NavLink>
                     </ul>
                 </div>
 
@@ -57,9 +55,7 @@ const Header = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 flex gap-3 text-lg">
                     <NavLink className={({ isActive }) => (isActive ? "text-rose-600 font-bold " : "text-black")} to={"/"}> <li>Home</li></NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? "text-rose-600 font-bold " : "text-black")} to={"/about"}>  <li>About</li></NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? "text-rose-600 font-bold " : "text-black")} to={"/blog"}><li>Blog</li></NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? "text-rose-600 font-bold " : "text-black")} to={"/faq"}><li>FAQ</li></NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? "text-rose-600 font-bold " : "text-black")} to={"/products"}><li>Products</li></NavLink>
                 </ul>
             </div>
             <div className="navbar-end">
