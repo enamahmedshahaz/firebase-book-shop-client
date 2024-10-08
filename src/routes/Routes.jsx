@@ -22,14 +22,14 @@ const router = createBrowserRouter([
       },
       {
         path: "/books/:bookId",
-        loader: ({ params }) => fetch(`http://localhost:5000/api/products/${params.bookId}`),
+        loader: ({ params }) => fetch(`https://firebase-book-shop-server.vercel.app/api/products/${params.bookId}`),
         element: <PrivateRoutes> <BookDetails></BookDetails> </PrivateRoutes>,
 
       },
       {
         path: "/products",
         element: <PrivateRoutes> <Products></Products> </PrivateRoutes>,
-        loader: () => fetch('http://localhost:5000/api/products'),
+        loader: () => fetch('https://firebase-book-shop-server.vercel.app/api/products'),
       },
       {
         path: "/login",

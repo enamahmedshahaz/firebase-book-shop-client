@@ -40,8 +40,10 @@ const BookDetails = () => {
 
 
     return (
-        <div className="flex justify-between items-start gap-4 bg-rose-100 p-10 rounded-md">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-4 bg-rose-100 p-10 rounded-md">
+
             <div><Toaster /></div>
+
             <div className="flex flex-col justify-center items-center gap-2">
 
                 <img className="rounded-xl" src={image} alt={`image of book named ${bookName}`}></img>
@@ -69,6 +71,9 @@ const BookDetails = () => {
                 </div>
             </div>
 
+            <div className="w-full lg:hidden">
+                <div className="divider text-white"></div>
+            </div>
 
             <div className="w-1/2 flex flex-col gap-4 items-start">
 

@@ -58,8 +58,8 @@ const Header = () => {
                     <NavLink className={({ isActive }) => (isActive ? "text-rose-600 font-bold " : "text-black")} to={"/products"}><li>Products</li></NavLink>
                 </ul>
             </div>
-            <div className="navbar-end">
 
+            <div className="navbar-end flex-col md:flex-row">
                 {
                     user ?
                         <>
@@ -69,10 +69,7 @@ const Header = () => {
                         :
                         <Link to={'/login'}>   <button className="btn bg-rose-400 text-white">Sign In</button> </Link>
 
-
                 }
-
-
 
             </div>
         </div>

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import toast, { Toaster } from 'react-hot-toast';
 import { FaGoogle } from 'react-icons/fa';
@@ -8,6 +8,7 @@ import { FaGoogle } from 'react-icons/fa';
 const Login = () => {
 
     const { state } = useLocation();
+    const navigate = useNavigate();
 
     const { signInUser, loginWithGoogle } = useContext(AuthContext);
 
@@ -22,6 +23,8 @@ const Login = () => {
             .then(result => {
                 console.log(result.user);
                 toast.success("Login successful");
+                navigate('/');
+
             })
             .catch(error => {
                 console.log(error);
@@ -35,6 +38,7 @@ const Login = () => {
             .then(result => {
                 console.log(result.user);
                 toast.success("Login with Google successful");
+                navigate('/');
             })
             .catch(error => {
                 console.log(error);

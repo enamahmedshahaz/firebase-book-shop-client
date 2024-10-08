@@ -3,7 +3,7 @@ import bannerImage from "../../assets/images/banner.jpg";
 
 const Banner = () => {
     return (
-        <div className="flex items-center justify-between rounded-lg bg-rose-100 p-6">
+        <div className="flex flex-col-reverse md:flex-row items-center justify-between rounded-lg bg-rose-100 p-6">
 
             <div className="text-center flex flex-col gap-2">
                 <h3 className="font-extrabold text-4xl text-rose-500">Unlock a World of  Stories</h3>
@@ -15,7 +15,7 @@ const Banner = () => {
            <Link to={'/products'}>      <button className="btn bg-rose-400 text-2xl text-white">View our collection</button> </Link>
             </div>
 
-            <div className="w-1/2">
+            <div className="w-full md:w-1/2">
                 <img className="rounded-lg" src={bannerImage}></img>
             </div>
         </div>

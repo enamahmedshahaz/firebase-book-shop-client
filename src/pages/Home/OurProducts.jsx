@@ -8,7 +8,7 @@ const OurProducts = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/products')
+        fetch('https://firebase-book-shop-server.vercel.app/api/products')
             .then(res => res.json())
             .then(data => setBooks(data.slice(0, 3)));
     }, []);
