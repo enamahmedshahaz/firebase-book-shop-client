@@ -14,9 +14,9 @@ const PrivateRoutes = ({ children }) => {
     if (user) {
         return children;
     }
-    
-    return <Navigate to="/login"></Navigate>;
-    
+
+    return <Navigate to="/login" state={{ message: 'Please login first!' }}></Navigate>;
+
 };
 
 export default PrivateRoutes;
