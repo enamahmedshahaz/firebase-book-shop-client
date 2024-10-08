@@ -9,7 +9,7 @@
 
 ## Project Backend
 
-**Backend Live:** [https://vercel.live/link/firebase-book-shop-server.vercel.app](https://vercel.live/link/firebase-book-shop-server.vercel.app) 
+**Backend Live:** [https://firebase-book-shop-server.vercel.app/](https://firebase-book-shop-server.vercel.app/) 
 
 **Backend Github Repo:** [https://github.com/enamahmedshahaz/firebase-book-shop-server](https://github.com/enamahmedshahaz/firebase-book-shop-server) 
 
